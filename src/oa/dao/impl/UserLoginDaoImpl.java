@@ -1,17 +1,13 @@
 package oa.dao.impl;
 
 import oa.dao.UserLoginDao;
+import oa.domain.LoginInfo;
 
 public class UserLoginDaoImpl implements UserLoginDao{
 
-	public String CheckUserType(String username) {
+	@Override
+	public boolean CheckUser(LoginInfo loginInfo) {
 		
-		return null;
-	}
-
-	public boolean CheckUser(String username, String password) {
-
 		return false;
 	}
-
 }

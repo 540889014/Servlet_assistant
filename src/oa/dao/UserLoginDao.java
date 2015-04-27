@@ -1,7 +1,8 @@
 package oa.dao;
 
+import oa.domain.LoginInfo;
+
 public interface UserLoginDao {
 
-	public String CheckUserType(String username);
-	public boolean CheckUser(String username,String password);
+	public boolean CheckUser(LoginInfo loginInfo);
 }
