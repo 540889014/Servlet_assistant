@@ -35,7 +35,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   	<div align="center"> 
 	<form action="LoginServlet" method="post">
-	<table  width="1600" height="700" background="image/login3.jpg" >
+	<table  width="1600" height="700" background="image/login3.jpg">
 		<tr height="300">
 		<td></td>
 		</tr>
@@ -70,7 +70,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<tr height="10">
 			<td width="40%"></td>
 			<td colspan="3">
-				<font color="red">${requestScope.error }</font>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="red">${requestScope.error }</font>
 			</td>
 		</tr>
 		<tr>

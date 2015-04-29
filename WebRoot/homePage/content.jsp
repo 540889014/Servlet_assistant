@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body class="home-template">
-
+	<h1>Content</h1>
 </body>
 </html>

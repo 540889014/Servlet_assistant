@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import oa.dao.UserLoginDao;
+import oa.dao.impl.UserLoginDaoImpl;
+import oa.domain.LoginInfo;
+
 @SuppressWarnings("serial")
 public class LoginServlet extends HttpServlet {
 
@@ -67,12 +71,25 @@ public class LoginServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String Usertype=request.getParameter("Logintype");
+		String usertype=request.getParameter("Logintype");
 		String username=request.getParameter("username");
 		String password=request.getParameter("password");
-		System.out.println(Usertype);
-		System.out.println(username);
-		System.out.println(password);
+		String error="用户名或密码错误！";
+		LoginInfo loginInfo=new LoginInfo();
+		loginInfo.setUserType(usertype);
+		loginInfo.setUsername(username);
+		loginInfo.setPassword(password);
+		UserLoginDao userLoginDao=new UserLoginDaoImpl();
+		boolean success=userLoginDao.CheckUser(loginInfo);
+		if(success)
+		{
+			request.getRequestDispatcher("homePage/main.jsp").forward(request, response);
+		}else
+		{
+			request.setAttribute("error", error);
+			request.getRequestDispatcher("Login.jsp").forward(request, response);
+		}
+
 	}
 
 	/**

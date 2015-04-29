@@ -35,7 +35,7 @@ public class Student {
 	   private String Classid;              
 	   private String Stu_jj;               
 	   private String Stu_address;          
-	   private String Entrytime;            
+	   private Date Entrytime;            
 	   private String Stu_political;        
 	   private String Stu_type;             
 	   private String Stu_state;           
@@ -108,10 +108,10 @@ public class Student {
 	public void setStu_address(String stu_address) {
 		Stu_address = stu_address;
 	}
-	public String getEntrytime() {
+	public Date getEntrytime() {
 		return Entrytime;
 	}
-	public void setEntrytime(String entrytime) {
+	public void setEntrytime(Date entrytime) {
 		Entrytime = entrytime;
 	}
 	public String getStu_political() {
