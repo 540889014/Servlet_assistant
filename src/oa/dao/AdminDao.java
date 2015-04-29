@@ -6,6 +6,9 @@ import oa.domain.Admin;
 
 public interface AdminDao {
 
+	/**
+	 * 管理员信息
+	 */
 	public void saveAdmin(Admin admin);
 	public void updateAdmin(Admin admin);
 	public void deleteAdmin(String AdminId);

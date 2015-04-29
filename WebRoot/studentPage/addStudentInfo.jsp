@@ -9,14 +9,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'success.jsp' starting page</title>
-    
-
-  </head>
-  
+    <title>My JSP 'addStudent.jsp' starting page</title>
+  </head> 
   <body>
-	<%
-		response.sendRedirect(request.getContextPath() + "/homePage/main/jsp");
-	 %>
+	
   </body>
 </html>

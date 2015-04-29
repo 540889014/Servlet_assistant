@@ -7,6 +7,9 @@ import oa.domain.LoanInfo;
 
 public interface LoanDao {
 
+	/**
+	 * 管理贷款信息
+	 */
 	public int deleteLoanInfo(String DK_id);
 	public int addLoanInfo(LoanInfo loanInfo);
 	public  ResultSet QueryLoanInfo(String Stu_id);
