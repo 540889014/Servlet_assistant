@@ -90,6 +90,10 @@
 		{
 			window.parent.content.location.href="../studentPage/addStudentInfo.jsp";	
 		}
+		function BrowseZhuXueJinInfo()
+		{
+			window.parent.content.location.href="../studentPage/BrowseZhuXueJinInfo.jsp";	
+		}
 	</script>
 	<style type="text/css">
 		#menu1,#menu2,#menu3{
@@ -121,7 +125,7 @@
 			</tr>
 			<tr>
 				<td>
-					<button type="button" class="btn btn-link">学生助学金信息</button>
+					<button type="button" class="btn btn-link" onclick="BrowseZhuXueJinInfo()">学生助学金信息</button>
 				</td>
 			</tr>
 			<tr>

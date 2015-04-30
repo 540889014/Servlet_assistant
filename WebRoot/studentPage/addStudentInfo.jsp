@@ -21,8 +21,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <title>My JSP 'addStudent.jsp' starting page</title>
   </head> 
   <body>
-	<div align="center">
+	<div>
   	<form class="form-inline">
+  <div style="float: left">
   <div class="form-group">
     <label for="exampleInputName2">学号</label><br>
     <input type="text" class="form-control" id="Stu_id" placeholder="number" name="Stu_id">
@@ -35,19 +36,37 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <label for="exampleInputEmail2">学生密码</label><br>
     <input type="text" class="form-control" id="Stu_password" placeholder="" name="Stu_password">
   </div><br>
+  </div>
+  <div style="float:left">
   <div class="form-group" >
     <label for="exampleInputEmail2">性别</label><br>
     男<input type="radio" class="form-control" id="Stu_sex" name="Stu_sex" value="male">
     女<input type="radio" class="form-control" id="Stu_sex" name="Stu_sex" value="femal">
   </div><br>
   <div class="form-group" >
-    <label for="exampleInputEmail2">出生年月(格式yyyy.mm.dd)</label><br>
-    <input type="text" class="form-control" id="Stu_birthday" placeholder="1995.01.01" name="Stu_birthday">
+    <label for="exampleInputEmail2">出生年月</label><br>
+    <select name="Stu_birthday_Year" class="form-control">
+    	<% for(int i=1980;i<=2000;i++){%>
+    	<option value="<%=i%>"><%=i%></option>
+    	<%} %>
+    </select>年
+    <select name="Stu_birthday_month" class="form-control">
+    	<% for(int i=1;i<=12;i++){%>
+    	<option value="<%=i%>"><%=i%></option>
+    	<%} %>
+    </select>月
+    <select name="Stu_birthday_Day" class="form-control">
+    	<% for(int i=1;i<=31;i++){%>
+    	<option value="<%=i%>"><%=i%></option>
+    	<%} %>
+    </select>日
   </div><br>
   <div class="form-group" >
     <label for="exampleInputEmail2">相片</label><br>
     <input type="file" class="form-control" id="Stu_pic" name="Stu_pic">
   </div><br>
+  </div>
+  <div style="float:left">
   <div class="form-group" >
     <label for="exampleInputEmail2">籍贯</label><br>
     <input type="text" class="form-control" id="Stu_from" placeholder="省份+市县" name="Stu_from">
@@ -60,6 +79,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <label for="exampleInputEmail2">班级号</label><br>
     <input type="text" class="form-control" id="Classid" placeholder="" name="Classid">
   </div><br>
+  </div>
+   <div style="float:left">
   <div class="form-group" >
     <label for="exampleInputEmail2">学生简介</label><br>
     <input type="text" class="form-control" id="Stu_jj" placeholder="学生简单介绍" name="Stu_jj">
@@ -70,8 +91,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </div><br>
   <div class="form-group" >
   <label for="exampleInputEmail2">入学时间</label><br>
-    <input type="text" class="form-control" id="Entrytime" placeholder="Entrytime" name="Entrytime">
+    <select name="Entrytime_Year" class="form-control">
+    	<% for(int i=1977;i<=2016;i++){%>
+    	<option value="<%=i%>"><%=i%></option>
+    	<%} %>
+    </select>年
+    <select name="Entrytime_Month" class="form-control">
+    	<% for(int i=1;i<=12;i++){%>
+    	<option value="<%=i%>"><%=i%></option>
+    	<%} %>
+    </select>月
+    <select name="Entrytime_Day" class="form-control">
+    	<% for(int i=1;i<=31;i++){%>
+    	<option value="<%=i%>"><%=i%></option>
+    	<%} %>
+    </select>日
   </div><br>
+  </div>
+   <div style="float:left">
   <div class="form-group" >
   <label for="exampleInputEmail2">政治面貌</label><br>
     <input type="text" class="form-control" id="Stu_political" placeholder="political" name="Stu_political">
@@ -84,6 +121,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <label for="exampleInputEmail2">民族</label><br>
     <input type="text" class="form-control" id="Stu_state" placeholder="state" name="Stu_state">
   </div><br>
+  </div>
+   <div style="float:left">
   <div class="form-group" >
   <label for="exampleInputEmail2">学制</label><br>
     <input type="text" class="form-control" id="Stu_study" placeholder="" name="Stu_study">
@@ -98,6 +137,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </div><br>
   <input type="submit" class="btn btn-default" value="保存"/>
   <input type="reset" class="btn btn-default" value="重置"/>
+  </div>
 </form>
 </div>
   </body>

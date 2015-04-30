@@ -33,8 +33,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <input type="text" class="form-control" id="DK_money" placeholder="jane.doe@example.com" name="DK_money">
   </div><br>
   <div class="form-group">
-    <label for="exampleInputEmail2">贷款日期(日期格式yyyy.mm.dd)</label><br>
-    <input type="text" class="form-control" id="DK_date" placeholder="jane.doe@example.com" name="DK_date">
+    <label for="exampleInputEmail2">贷款日期</label><br>
+    <select class="form-control" name="DK_date_Year">
+    	<% for(int i=2000;i<=2020;i++){%>
+    	<option value="<%=i%>"><%=i%></option>
+    	<%} %>
+    </select>年
+    <select class="form-control" name="DK_date_Month">
+    	<% for(int i=1;i<=12;i++){%>
+    	<option value="<%=i%>"><%=i%></option>
+    	<%} %>
+    </select>月
+    <select class="form-control" name="DK_date_Day">
+    	<% for(int i=1;i<=31;i++){%>
+    	<option value="<%=i%>"><%=i%></option>
+    	<%} %>
+    </select>日
   </div><br>
   <div class="form-group" >
     <label for="exampleInputEmail2">贷款经办人</label><br>
