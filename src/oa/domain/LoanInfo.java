@@ -13,6 +13,7 @@ public class LoanInfo {
 	 * DK_remark±¸×¢
 	 */
 	private String Stu_id;
+	private String Stu_name;
 	private double DK_money;
 	private Date DK_date;
 	private String DK_jbr;
@@ -24,6 +25,12 @@ public class LoanInfo {
 	}
 	public void setStu_id(String stu_id) {
 		Stu_id = stu_id;
+	}
+	public String getStu_name() {
+		return Stu_name;
+	}
+	public void setStu_name(String stu_name) {
+		Stu_name = stu_name;
 	}
 	public double getDK_money() {
 		return DK_money;

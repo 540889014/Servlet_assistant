@@ -74,6 +74,22 @@
 							whichContinue='';
 						}
 		}
+		function addLoanInfo()
+		{
+			window.parent.content.location.href="../loanPage/addLoanInfo.jsp";
+		}
+		function findAllLoanInfo()
+		{
+			window.parent.content.location.href="../loanPage/managerLoanInfo.jsp";
+		}
+		function findAllStudentInfo()
+		{
+			window.parent.content.location.href="../studentPage/managerStudentInfo.jsp";
+		}
+		function addStudentInfo()
+		{
+			window.parent.content.location.href="../studentPage/addStudentInfo.jsp";	
+		}
 	</script>
 	<style type="text/css">
 		#menu1,#menu2,#menu3{
@@ -84,14 +100,14 @@
 <body class="home-template">
 	
 			<button type="button" value="A" class="btn btn-primary btn-sm" id="list1" onmousemove="this.typename='list_title2';" onclick="change(document.getElementById('menu1'),150,document.getElementById('list1'));"
-				onmouseout="this.typename='list_title';" >贷款信息</button><br>
+				onmouseout="this.typename='list_title';">贷款信息</button><br>
 		
 		<table id="menu1">
 			<tr>
-				<td><button type="button" class="btn btn-link">查询贷款信息</button></td>
+				<td><button type="button" class="btn btn-link" onclick="findAllLoanInfo()">查询贷款信息</button></td>
 			</tr>
 			<tr>
-				<td><button type="button" class="btn btn-link">新增贷款信息</button></td>
+				<td><button type="button" class="btn btn-link" onclick="addLoanInfo()">新增贷款信息</button></td>
 			</tr>
 		</table>
 	
@@ -100,7 +116,7 @@
 		<table id="menu2">
 			<tr>
 				<td>
-					<button type="button" class="btn btn-link">学生基本信息</button>
+					<button type="button" class="btn btn-link" onclick="findAllStudentInfo()">学生基本信息</button>
 				</td>
 			</tr>
 			<tr>
@@ -128,8 +144,13 @@
 					<button type="button" class="btn btn-link">党员信息</button>
 				</td>
 			</tr>
+			<tr>
+				<td>
+					<button type="button" class="btn btn-link" onclick="addStudentInfo()">新增学生信息</button>
+				</td>
+			</tr>
 		</table>
-		<button type="button" value="A" class="btn btn-primary btn-sm" id="list3" onmousemove="this.typename='list_title2';" onclick="change(menu3,150,list3);"
+		<button type="button" value="A" class="btn btn-primary btn-sm" id="list3" onmousemove="this.typename='list_title2';" onclick="change(document.getElementById('menu3'),150,document.getElementById('list3'));"
 				onmouseout="this.typename='list_title';" >留言平台</button><br>
 		
 		<table id="menu3">

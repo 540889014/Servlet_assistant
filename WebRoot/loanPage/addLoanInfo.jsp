@@ -10,10 +10,51 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <base href="<%=basePath%>">
     
     <title>My JSP 'addLoan.jsp' starting page</title>
-
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap3/css/bootstrap.min.css">
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap3/css/bootstrap-theme.min.css">
+		<script src="${pageContext.request.contextPath}/bootstrap3/js/jquery-1.11.2.min.js"></script>
+		<script src="${pageContext.request.contextPath}/bootstrap3/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap3/css/bootstrap.css">
+		<script src="${pageContext.request.contextPath}/bootstrap3/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap3/css/bootstrap-theme.css">
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap3/css/app.css">
+	
   </head>
   
   <body>
-  	
+  <div align="center">
+  	<form class="form-inline">
+  <div class="form-group">
+    <label for="exampleInputName2">学号</label><br>
+    <input type="text" class="form-control" id="Stu_id" placeholder="Jane Doe" name="Stu_id">
+  </div><br>
+  <div class="form-group">
+    <label for="exampleInputEmail2">贷款金额</label><br>
+    <input type="text" class="form-control" id="DK_money" placeholder="jane.doe@example.com" name="DK_money">
+  </div><br>
+  <div class="form-group">
+    <label for="exampleInputEmail2">贷款日期(日期格式yyyy.mm.dd)</label><br>
+    <input type="text" class="form-control" id="DK_date" placeholder="jane.doe@example.com" name="DK_date">
+  </div><br>
+  <div class="form-group" >
+    <label for="exampleInputEmail2">贷款经办人</label><br>
+    <input type="text" class="form-control" id="DK_jbr" placeholder="jane.doe@example.com" name="DK_jbr">
+  </div><br>
+  <div class="form-group" >
+    <label for="exampleInputEmail2">贷款银行</label><br>
+    <input type="text" class="form-control" id="DK_bank" placeholder="jane.doe@example.com" name="DK_bank">
+  </div><br>
+  <div class="form-group" >
+    <label for="exampleInputEmail2">联系方式</label><br>
+    <input type="text" class="form-control" id="DK_lx" placeholder="jane.doe@example.com" name="DK_lx">
+  </div><br>
+  <div class="form-group" >
+    <label for="exampleInputEmail2">备注</label><br>
+    <input type="text" class="form-control" id="DK_remark" placeholder="jane.doe@example.com" name="DK_remark">
+  </div><br>
+  <input type="submit" class="btn btn-default" value="保存"/>
+  <input type="reset" class="btn btn-default" value="重置"/>
+</form>
+</div>
   </body>
 </html>

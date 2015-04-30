@@ -33,4 +33,14 @@ public class Stu_ScoreDaoImpl implements Stu_ScoreDao{
 		return null;
 	}
 
+	@Override
+	public Stu_score findStu_ScoreByTea_Id(String Tea_Id) {
+		return null;
+	}
+
+	@Override
+	public Stu_score findStu_ScoreByCourse_Id(String Course_Id) {
+		return null;
+	}
+
 }

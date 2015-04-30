@@ -13,6 +13,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    This is my JSP page. <br>
+    <table class="table table-bordered" align="center" border="1px">
+		<tr>
+			<th>学号</th>
+			<th>学生姓名</th>
+			<th>性别</th>
+			<th>出生年月</th>
+			<th>籍贯</th>
+			<th>学院号</th>
+			<th>班级号</th>
+			<th>学生简介</th>
+			<th>联系地址</th>
+			<th>入学时间</th>
+			<th>政治面貌</th>
+			<th>生源类型</th>
+			<th>民族</th>
+			<th>学制</th>
+			<th>专业</th>
+			<th>联系电话</th>
+		</tr>
+	</table>
   </body>
 </html>
